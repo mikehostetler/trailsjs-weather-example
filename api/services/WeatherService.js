@@ -55,7 +55,6 @@ module.exports = class WeatherService extends Service {
       }
 
       if(res.response.error) {
-        console.log('Error when querying Weather Undergorund!');
         return cb(res.response.error.description,[]);
       }
       else {
@@ -72,22 +71,17 @@ module.exports = class WeatherService extends Service {
     var expired = moment().subtract(this.app.config.weather.wunderground_cache_timeout,'seconds').toDate();
 
     var query = {'zip': zip, 'updatedAt': {$gte: expired}};
-    console.log('Find forecast for zip '+zip);
     this.app.orm.WeatherForecast.findOne(query, function(err, forecast) {
-      console.log('Fetching findOne Forecast for zip' +zip);
       if (err) {
-        console.log('Error 1?');
         cb(err, forecast.data);
       }
 
       if(!forecast) {
         // No forecast returned, fetch it
-        //console.log('New Forecast! Fetch');
         self.fetchForecast(zip, cb);
       }
       else {
         // Found our forecast, return it
-        //console.log('Found our forecast in the cache');
         cb(false, forecast.data);
       }
     });  

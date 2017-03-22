@@ -20,7 +20,7 @@ jQuery(function ($) {
    */
   function getForecastByZip(zip,cb,err_cb) {
     $.ajax({
-      dataType: "json",
+      dataType: 'json',
       type: 'GET',
       url: WEATHER_URL + zip,
       success: function(data) {
@@ -52,7 +52,6 @@ jQuery(function ($) {
       });
     },function(error) {
       $('#forecast').empty().append('There was an error with your request.  Please enter a different zip code and try again');
-
     });
 
     return false;

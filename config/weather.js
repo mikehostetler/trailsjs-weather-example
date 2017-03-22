@@ -15,7 +15,7 @@ module.exports = {
    * 
    * Get yours at https://www.wunderground.com/weather/api
    */
-  wunderground_key: process.env.WUNDERGROUND_KEY || '',
+  wunderground_key: process.env.WUNDERGROUND_KEY || null,
 
   /**
    * How long should we cache weather results?

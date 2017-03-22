@@ -23,7 +23,7 @@ Learn how to [install MongoDB](https://docs.mongodb.com/manual/installation/) fo
 ```sh
 $ mkdir weather-example
 
-$ git clone $repository weather-example
+$ git clone git@github.com:mikehostetler/trailsjs-weather-example.git weather-example
 
 $ cd weather-example
 
@@ -41,7 +41,7 @@ environment variables or by modifying values in their respective config files.
 
 | Config Name | default | description |
 |:---|:---|:---|
-| `WUNDERGROUND_KEY` | `` | _Required_ API Key for Weather Underground |
+| `WUNDERGROUND_KEY` | empty | _*Required*_ API Key for Weather Underground |
 | `HOST` | `0.0.0.0` | Host to run the webserver on. |
 | `PORT` | `3000` | Port to run the webserver on. |
 | `DB_HOST` | `localhost` | MongoDB database server host |

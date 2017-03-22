@@ -1,7 +1,7 @@
 {
-  "name": "turing-g-test",
+  "name": "trailsjs-weather-example",
   "version": "0.0.0",
-  "description": "Code Test for the Turing Group",
+  "description": "Example Trails.js application demonstrating the use of a service to fetch weather data by US zip code, cache the results and report those to the front end.",
   "homepage": "http://trailsjs.io",
   "author": {
     "name": "Mike Hostetler",
@@ -40,7 +40,8 @@
     "supertest": "^1.2"
   },
   "scripts": {
-    "test": "eslint . && mocha"
+    "test": "eslint . && mocha",
+    "start": "node server.js"
   },
   "engines": {
     "node": ">= 4.0.0"

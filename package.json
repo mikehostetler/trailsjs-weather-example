@@ -1,0 +1,53 @@
+{
+  "name": "turing-g-test",
+  "version": "0.0.0",
+  "description": "Code Test for the Turing Group",
+  "homepage": "http://trailsjs.io",
+  "author": {
+    "name": "Mike Hostetler",
+    "email": "mike.hostetler@gmail.com",
+    "url": "http://mike-hostetler.com"
+  },
+  "main": "index.js",
+  "keywords": [
+    "weather",
+    "underground",
+    "example",
+    "code test",
+    "trails",
+    "trailsjs"
+  ],
+  "dependencies": {
+    "boom": "^4.2.0",
+    "handlebars": "^4.0.6",
+    "moment": "^2.17.1",
+    "trailpack-autoreload": "^1.0.2",
+    "trailpack-footprints": "^2.0.0",
+    "trailpack-hapi": "^2.2.0",
+    "trailpack-mongoose": "^2.1.1",
+    "trailpack-repl": "v2-latest",
+    "trailpack-router": "v2-latest",
+    "trails": "v2-latest",
+    "waterline-sqlite3": "^1.0.3",
+    "winston": "^2.3",
+    "wundergroundnode": "^0.11.0",
+    "zippo": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.11",
+    "eslint-config-trails": "^2",
+    "mocha": "^2.5",
+    "supertest": "^1.2"
+  },
+  "scripts": {
+    "test": "eslint . && mocha"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "repository": "mikehostetler/turing-g-test",
+  "license": "MIT"
+}
